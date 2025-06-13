@@ -1,0 +1,39 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int main() {
+    int firstnum, secondnum;
+    char operation;
+
+    cout << "Enter a number: ";
+    cin >> firstnum;
+
+    cout << "Enter an operation (+ - * /): ";
+    cin >> operation;
+
+    cout << "Enter another number: ";
+    cin >> secondnum;
+
+    switch(operation) {
+        case '+':
+            cout << "The result is: " << firstnum + secondnum << endl;
+            break;
+        case '-':
+            cout << "The result is: " << firstnum - secondnum << endl;
+            break;
+        case '*':
+            cout << "The result is: " << firstnum * secondnum << endl;
+            break;
+        case '/':
+            if(secondnum != 0)
+                cout << "The result is: " << firstnum / secondnum << endl;
+            else
+                cout << "Error: Division by zero!" << endl;
+            break;
+        default:
+            cout << "Invalid operation!" << endl;
+    }
+
+    return 0;
+}
